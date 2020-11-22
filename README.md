@@ -1,6 +1,8 @@
 # liquibase-docker-demo
 
-A *template* for CI/CD using Liquibase, Docker and Jenkins.
+![](https://miro.medium.com/max/491/1*fwQrAHSeYhoQ1xaAjX5sTQ.jpeg)
+
+A **template** for CI/CD using Liquibase, Docker, and Jenkins.
 
 ### To build this, type:
 ```

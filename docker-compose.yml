@@ -1,0 +1,39 @@
+version: '3'
+
+services:
+  db:
+    image: mysql:5.7
+    container_name: db
+    ports:
+      - "3306:3306"
+    command: --default-authentication-plugin=mysql_native_password --sql_mode=''
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: "example"
+      MYSQL_DATABASE: demodb
+
+  dbreference:
+    image: mysql:5.7
+    container_name: dbreference
+    ports:
+      - "3307:3306"
+    command: --default-authentication-plugin=mysql_native_password --sql_mode=''
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: "example"
+      MYSQL_DATABASE: demodb
+
+  liquibase:
+    image: ekolp/liquibase
+    container_name: liquibase
+    entrypoint:
+      - /bin/bash
+    tty: true
+    build:
+      context: ./
+      dockerfile: Dockerfile-liquibase
+    volumes:
+      - ./:/wd
+    working_dir: /wd
+    links:
+      - db

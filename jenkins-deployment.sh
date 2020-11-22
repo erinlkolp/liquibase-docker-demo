@@ -8,7 +8,7 @@ docker pull ekolp/liquibase:latest
 if [[ ${ACTION} == 'dbtargetone' ]]; then
     TARGET_DBS="demodb"
 elif [[ ${ACTION} == 'dbtargettwo' ]]; then
-    TARGET_DBS="demodb "
+    TARGET_DBS="demodb"
 elif [[ ${ACTION} == 'dbtargetthree' ]]; then
     TARGET_DBS="demodb"
 elif [[ ${ACTION} == 'local' ]]; then

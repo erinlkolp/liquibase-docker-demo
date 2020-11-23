@@ -1,8 +1,8 @@
--- MySQL dump 10.13  Distrib 5.7.29, for osx10.14 (x86_64)
+-- MySQL dump 10.13  Distrib 5.7.28, for osx10.15 (x86_64)
 --
 -- Host: 127.0.0.1    Database: demodb
 -- ------------------------------------------------------
--- Server version	5.7.32
+-- Server version	5.7.31
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -16,24 +16,26 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `example_table`
+-- Table structure for table `example`
 --
 
-DROP TABLE IF EXISTS `example_table`;
+DROP TABLE IF EXISTS `example`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `example_table` (
-  `example_one` varchar(255) DEFAULT NULL
+CREATE TABLE `example` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) NOT NULL DEFAULT '',
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `example_table`
+-- Dumping data for table `example`
 --
 
-LOCK TABLES `example_table` WRITE;
-/*!40000 ALTER TABLE `example_table` DISABLE KEYS */;
-/*!40000 ALTER TABLE `example_table` ENABLE KEYS */;
+LOCK TABLES `example` WRITE;
+/*!40000 ALTER TABLE `example` DISABLE KEYS */;
+/*!40000 ALTER TABLE `example` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -45,4 +47,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-11-22 15:36:27
+-- Dump completed on 2020-11-23 10:26:55

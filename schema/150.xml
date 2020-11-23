@@ -6,8 +6,8 @@
   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
          http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
     <changeSet author="user" id="150-1">
-        <addColumn tableName="example_table" xmlns:liquibasePercona="http://github.com/adangel/liquibase-percona" liquibasePercona:usePercona="false">
-            <column name="example_two" type="VARCHAR(60 BYTE)"/>
+        <addColumn tableName="example">
+            <column name="town" type="VARCHAR(60 BYTE)"/>
         </addColumn>
     </changeSet>
 </databaseChangeLog>

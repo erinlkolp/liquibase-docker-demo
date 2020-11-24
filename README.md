@@ -17,6 +17,10 @@ docker-compose up -d
 ### To drive this, type:
 ```
 docker exec liquibase liquibase update
+
+OR
+
+./jenkins-integration.sh
 ```
 
 ### To stop this, type:

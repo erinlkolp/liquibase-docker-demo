@@ -4,7 +4,7 @@ USER root
 ENV PATH=/liquibase/:$PATH
 
 RUN wget -O /liquibase/lib/liquibase-percona-4.3.4.jar https://liquibase.jira.com/wiki/download/attachments/47284233/liquibase-percona-4.3.4.jar?api=v2
-RUN chown 101:101 /liquibase/lib/liquibase-percona-4.3.4.jar
+RUN chown 1001:1001 /liquibase/lib/liquibase-percona-4.3.4.jar
 
 RUN apt update && apt-get install perl libdbi-perl libdbd-mysql-perl libterm-readkey-perl libio-socket-ssl-perl -y
 
@@ -14,7 +14,7 @@ RUN wget https://downloads.percona.com/downloads/percona-toolkit/3.3.0/binary/de
 COPY mysql-connector-java-5.1.47.jar /lib/mysql-connector-java-5.1.47.jar
 
 COPY liquibase /liquibase/liquibase
-RUN chown 101:101 /liquibase/liquibase
+RUN chown 1001:1001 /liquibase/liquibase
 
 # USER liquibase
 ENTRYPOINT ["/bin/bash"]
